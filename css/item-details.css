@@ -1,0 +1,540 @@
+.item-details-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.item-details-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.item-details-header h1 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+}
+
+.item-breadcrumb {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.item-breadcrumb a {
+    color: var(--text-light);
+    text-decoration: none;
+}
+
+.item-breadcrumb a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.item-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Gallery section */
+.item-gallery {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px var(--shadow);
+    height: fit-content;
+}
+
+.main-image {
+    min-height: 200px;
+    max-height: 350px; 
+    height: auto;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+    padding: 1rem;
+}
+
+.main-image img {
+    max-width: 100%;
+    max-height: 330px; /* Slightly less than container max-height */
+    object-fit: contain;
+}
+
+.zoom-icon {
+    display: none;
+}
+
+.gallery-thumbnails {
+    display: flex;
+    gap: 10px;
+    padding: 1rem;
+    background-color: white;
+    overflow-x: auto;
+    border-top: 1px solid var(--border-color);
+}
+
+.thumbnail {
+    width: 70px;
+    height: 70px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    border-radius: 4px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thumbnail.active {
+    border-color: var(--primary-color);
+}
+
+/* Bidding information */
+.item-bidding {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px var(--shadow);
+}
+
+.auction-status {
+    display: none;
+}
+
+.status-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.status-indicator.active {
+    background-color: var(--success-color);
+}
+
+.status-indicator.ended {
+    background-color: var(--danger-color);
+}
+
+.time-remaining {
+    margin-bottom: 1.5rem;
+}
+
+.countdown {
+    display: flex;
+    gap: 1rem;
+}
+
+.countdown-block {
+    text-align: center;
+    width: 60px;
+}
+
+.countdown-value {
+    font-size: 1.8rem;
+    font-weight: bold;
+    background-color: var(--background-light);
+    border-radius: 4px;
+    padding: 0.5rem 0;
+    margin-bottom: 0.3rem;
+}
+
+.countdown-label {
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+.current-bid-info {
+    margin: 1.5rem 0;
+}
+
+.current-bid-amount {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 0.3rem;
+}
+
+.bid-stats {
+    display: flex;
+    gap: 2rem;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+}
+
+.bid-form {
+    border-top: 1px solid var(--border-color);
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.bid-input-container {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.bid-currency {
+    width: 40px;
+    background-color: var(--background-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.bid-input {
+    flex-grow: 1;
+    padding: 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0 4px 4px 0;
+    font-size: 1.1rem;
+}
+
+.bid-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.bid-option {
+    background-color: var(--background-light);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.bid-option:hover {
+    background-color: white;
+}
+
+.bid-form-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.watchlist-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.shipping-info {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.shipping-option {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.shipping-icon {
+    font-size: 1.2rem;
+}
+
+/* Item details tabs */
+.item-details-tabs {
+    display: flex;
+    margin: 2rem 0 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.item-tab-button {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--text-light);
+    border-bottom: 2px solid transparent;
+}
+
+.item-tab-button.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+.item-tab-content {
+    display: none;
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px var(--shadow);
+}
+
+.item-tab-content.active {
+    display: block;
+}
+
+/* Description tab */
+.item-specs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+    background-color: var(--background-light);
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.spec-item {
+    margin-bottom: 0.5rem;
+}
+
+.spec-label {
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+}
+
+.spec-value {
+    color: var(--text-light);
+}
+
+/* Loading state styling */
+.loading {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-light);
+}
+
+/* Error message styling */
+.error-message {
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem 0;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.error-message h2 {
+    color: var(--danger-color);
+    margin-bottom: 1rem;
+}
+
+.error-message .btn-secondary {
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+/* Style for auction ended message */
+.auction-ended {
+    background-color: var(--danger-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 4px;
+    margin: 1rem 0;
+    font-weight: bold;
+}
+
+/* Add these styles for the bid tab content */
+.bid-history-container {
+    padding: 1rem 0;
+}
+
+.bid-history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.bid-history-table th,
+.bid-history-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.bid-history-table th {
+    background-color: var(--background-light);
+    font-weight: 500;
+}
+
+.user-bid {
+    background-color: rgba(58, 134, 255, 0.05);
+}
+
+.no-bids-message {
+    text-align: center;
+    padding: 2rem 0;
+    color: var(--text-light);
+}
+
+.be-first {
+    font-weight: 500;
+    color: var(--text-color);
+    margin-top: 0.5rem;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.status-badge.highest {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.status-badge.outbid {
+    background-color: var(--text-light);
+    color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .item-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .main-image {
+        height: 300px;
+    }
+    
+    .similar-items-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+}
+
+/* Add this to your existing CSS file */
+.owner-message {
+    margin: 1.5rem 0;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1.5rem;
+}
+
+.info-box {
+    background-color: #f0f7ff;
+    border-left: 4px solid var(--primary-color);
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.info-box p {
+    margin: 0.5rem 0;
+}
+
+.info-box p:first-child {
+    margin-top: 0;
+}
+
+.info-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* Add these styles at the end of your file */
+.bid-message {
+    padding: 12px 15px;
+    margin-top: 15px;
+    border-radius: 4px;
+    font-weight: 500;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.bid-message.success {
+    background-color: rgba(56, 176, 0, 0.1);
+    border-left: 4px solid var(--success-color);
+    color: var(--success-color);
+}
+
+.bid-message.error {
+    background-color: rgba(217, 4, 41, 0.1);
+    border-left: 4px solid var(--danger-color);
+    color: var(--danger-color);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Add these styles to handle watchlist button state */
+.watchlist-button.in-watchlist {
+  background-color: #f8f9fa;
+  border-color: var(--danger-color);
+  color: var(--danger-color);
+}
+
+.watchlist-button.in-watchlist:hover {
+  background-color: rgba(217, 4, 41, 0.1);
+}
+
+/* Modal styles */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 8px;
+    max-width: 450px;
+    width: 90%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    animation: modalFadeIn 0.3s ease-out;
+}
+
+.modal-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-header h2 {
+    margin: 0;
+    color: var(--text-color);
+    font-size: 1.5rem;
+}
+
+.modal-body {
+    padding: 1.5rem;
+    color: var(--text-color);
+}
+
+.modal-warning {
+    color: var(--danger-color);
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

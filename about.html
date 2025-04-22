@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BidMaster - How It Works</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>BidMaster</h1>
+            </div>
+            
+            <div class="user-menu">
+                <span class="username">Welcome, User</span>
+                <div class="dropdown">
+                    <button class="dropdown-button">My Account</button>
+                    <div class="dropdown-content">
+                        <a href="profile.html">Profile</a>
+                        <a href="my-bids.html">My Bids</a>
+                        <a href="my-listings.html">My Listings</a>
+                        <a href="login.html" id="logout">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="listings.html">All Listings</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="create-listing.html">Sell Item</a></li>
+                <li><a href="about.html" class="active">How It Works</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="about-container">
+        <div class="about-hero">
+            <div class="about-hero-content">
+                <h1>How BidMaster Works</h1>
+                <p>Your trusted online auction platform for unique and valuable items</p>
+            </div>
+        </div>
+
+        <div class="about-nav">
+            <ul>
+                <li><a href="#for-buyers">For Buyers</a></li>
+                <li><a href="#for-sellers">For Sellers</a></li>
+                <li><a href="#bidding-process">Bidding Process</a></li>
+                <li><a href="#payment-shipping">Payment & Shipping</a></li>
+                <li><a href="#fees">Fees & Charges</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </div>
+
+        <section id="for-buyers" class="about-section">
+            <h2>For Buyers</h2>
+
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">🔍</div>
+                    <h3>Browse & Discover</h3>
+                    <p>Explore our vast collection of unique items across various categories. Use filters and search to
+                        find exactly what you're looking for.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">📝</div>
+                    <h3>Register & Verify</h3>
+                    <p>Create your account and verify your identity to start bidding. This ensures a safe environment
+                        for all users.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">🏆</div>
+                    <h3>Bid & Win</h3>
+                    <p>Place your bids on items you're interested in. You'll receive notifications if you're outbid or
+                        if you win.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">💳</div>
+                    <h3>Pay & Receive</h3>
+                    <p>Once you win an auction, complete the payment and arrange shipping details with the seller.</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h3>Buyer Protection</h3>
+                <p>At BidMaster, we provide comprehensive buyer protection to ensure your purchases are secure. If an
+                    item doesn't match the description or isn't delivered, you're covered by our guarantee policy.</p>
+                <a href="#" class="btn-secondary">Learn about Buyer Protection</a>
+            </div>
+        </section>
+
+        <section id="for-sellers" class="about-section">
+            <h2>For Sellers</h2>
+
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">📸</div>
+                    <h3>Create Listing</h3>
+                    <p>Take clear photos and write detailed descriptions of your items. Set your starting price and
+                        auction duration.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">⏳</div>
+                    <h3>Auction Duration</h3>
+                    <p>Your item will be listed for the duration you specify (1-14 days). During this time, buyers can
+                        place bids.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">🎯</div>
+                    <h3>Auction Ends</h3>
+                    <p>When the auction ends, the highest bidder wins (as long as reserve price is met). You'll be
+                        notified of the outcome.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">📦</div>
+                    <h3>Ship & Get Paid</h3>
+                    <p>Once the buyer pays, you'll ship the item. Funds will be released to you after delivery
+                        confirmation.</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h3>Seller Tools</h3>
+                <p>We provide a range of tools to help you sell more effectively, including analytics, promotional
+                    features, and inventory management tools.</p>
+                <a href="#" class="btn-secondary">Explore Seller Tools</a>
+            </div>
+        </section>
+
+        <section id="bidding-process" class="about-section">
+            <h2>Bidding Process</h2>
+
+            <div class="bidding-info">
+                <h3>Understanding Bids</h3>
+                <p>When you place a bid, you're committing to buy the item at that price. The bidding starts at the
+                    seller's specified starting price and increases with each new bid. The minimum bid increment depends
+                    on the current bid amount:</p>
+
+                <table class="bidding-table">
+                    <thead>
+                        <tr>
+                            <th>Current Bid Range</th>
+                            <th>Minimum Bid Increment</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>€1 - €49.99</td>
+                            <td>€1</td>
+                        </tr>
+                        <tr>
+                            <td>€50 - €199.99</td>
+                            <td>€2</td>
+                        </tr>
+                        <tr>
+                            <td>€200 - €499.99</td>
+                            <td>€5</td>
+                        </tr>
+                        <tr>
+                            <td>€500 - €999.99</td>
+                            <td>€10</td>
+                        </tr>
+                        <tr>
+                            <td>€1,000 - €4,999.99</td>
+                            <td>€25</td>
+                        </tr>
+                        <tr>
+                            <td>€5,000+</td>
+                            <td>€50</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Reserve Price</h3>
+                <p>Sellers can set a reserve price, which is the minimum amount they're willing to sell the item for. If
+                    the highest bid doesn't meet the reserve, the item won't be sold. The reserve price is not visible
+                    to bidders, but they'll be informed if the reserve has been met.</p>
+
+                <h3>Automatic Bidding</h3>
+                <p>Our system allows you to set a maximum bid amount. The system will then automatically bid on your
+                    behalf, increasing your bid by the minimum increment necessary to keep you as the highest bidder, up
+                    to your maximum amount.</p>
+
+                <h3>Sniping Protection</h3>
+                <p>To prevent last-second "sniping" (bidding in the final seconds), auctions will be automatically
+                    extended by 5 minutes if a bid is placed in the last minute of the auction.</p>
+            </div>
+        </section>
+
+        <section id="payment-shipping" class="about-section">
+            <h2>Payment & Shipping</h2>
+
+            <div class="payment-info">
+                <h3>Accepted Payment Methods</h3>
+                <div class="payment-methods-grid">
+                    <div class="payment-method">
+                        <div class="payment-icon">💳</div>
+                        <p>Credit/Debit Card</p>
+                    </div>
+                    <div class="payment-method">
+                        <div class="payment-icon">📱</div>
+                        <p>PayPal</p>
+                    </div>
+                    <div class="payment-method">
+                        <div class="payment-icon">🏦</div>
+                        <p>Bank Transfer</p>
+                    </div>
+                    <div class="payment-method">
+                        <div class="payment-icon">⚡</div>
+                        <p>Cryptocurrency</p>
+                    </div>
+                </div>
+
+                <h3>Payment Process</h3>
+                <p>After winning an auction, you'll have 3 days to complete payment. Once payment is received, the
+                    seller will be notified to ship the item.</p>
+
+                <h3>Shipping</h3>
+                <p>Shipping arrangements are primarily between the buyer and seller. However, we provide recommended
+                    shipping options and integration with major carriers for generating shipping labels and tracking
+                    information.</p>
+
+                <h3>Insurance & Delivery Protection</h3>
+                <p>We recommend insuring shipments, especially for high-value items. Our platform offers optional
+                    shipping insurance at competitive rates.</p>
+            </div>
+        </section>
+
+        <section id="fees" class="about-section">
+            <h2>Fees & Charges</h2>
+
+            <div class="fees-info">
+                <h3>For Buyers</h3>
+                <p>There are no fees to register or place bids. A buyer's premium of 5% is applied to the final winning
+                    bid amount.</p>
+
+                <h3>For Sellers</h3>
+                <table class="fees-table">
+                    <thead>
+                        <tr>
+                            <th>Fee Type</th>
+                            <th>Amount</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Listing Fee</td>
+                            <td>€0.50</td>
+                            <td>Standard fee per listed item</td>
+                        </tr>
+                        <tr>
+                            <td>Commission</td>
+                            <td>10% of final sale</td>
+                            <td>Charged only when item sells</td>
+                        </tr>
+                        <tr>
+                            <td>Reserve Price Fee</td>
+                            <td>€2.00</td>
+                            <td>Additional fee for setting a reserve price</td>
+                        </tr>
+                        <tr>
+                            <td>Featured Listing</td>
+                            <td>€10.00</td>
+                            <td>Optional - display prominently on homepage</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="faq" class="about-section">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What happens if I win an auction but change my mind?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>When you place a bid, you're making a commitment to purchase the item if you win. If you
+                            don't complete the purchase, you may receive negative feedback and your account could face
+                            restrictions. In extreme cases, you may be banned from the platform.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I know if an item is authentic?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We encourage sellers to provide provenance and authentication for valuable items. For
+                            high-value categories like art, watches, and collectibles, many sellers offer certificates
+                            of authenticity. Additionally, our buyer protection covers cases of misrepresentation or
+                            counterfeit goods.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What should I do if I don't receive my item or it's not as described?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Contact the seller first to resolve the issue. If you can't reach a resolution, you can open
+                            a dispute through our platform within 14 days of the estimated delivery date. Our support
+                            team will review the case and may issue a refund if necessary.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I sell internationally?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you can specify in your listing whether you're willing to ship internationally. Be aware
+                            of customs regulations and potential duties that buyers may need to pay in different
+                            countries.</p>
+                    </div>
+                </div>
+
+                <!-- More FAQ items -->
+            </div>
+
+            <div class="more-questions">
+                <p>Don't see your question here?</p>
+                <a href="#" class="btn-secondary">Contact Support</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Same footer as other pages -->
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About BidMaster</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Help & Contact</h3>
+                <ul>
+                    <li><a href="#">Customer Support</a></li>
+                    <li><a href="#">Seller Information</a></li>
+                    <li><a href="#">Dispute Resolution</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Stay Connected</h3>
+                <div class="social-links">
+                    <a href="#" class="social-icon">Facebook</a>
+                    <a href="#" class="social-icon">Twitter</a>
+                    <a href="#" class="social-icon">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 BidMaster. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/auth-check.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/about.js"></script>
+</body>
+
+</html>

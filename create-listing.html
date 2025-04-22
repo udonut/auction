@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BidMaster - Create Auction Listing</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/create-listing.css">
+    <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>BidMaster</h1>
+            </div>
+            
+            <div class="user-menu">
+                <span class="username">Welcome, User</span>
+                <div class="dropdown">
+                    <button class="dropdown-button">My Account</button>
+                    <div class="dropdown-content">
+                        <a href="profile.html">Profile</a>
+                        <a href="my-bids.html">My Bids</a>
+                        <a href="my-listings.html">My Listings</a>
+                        <a href="login.html" id="logout">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="listings.html">All Listings</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="create-listing.html" class="active">Sell Item</a></li>
+                <li><a href="about.html">How It Works</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="create-listing-container">
+        <h1>Create New Auction</h1>
+        
+        <form class="create-listing-form">
+            <div class="form-section">
+                <h2>Item Details</h2>
+
+                <div class="form-group">
+                    <label for="item-title">Item Title*</label>
+                    <input type="text" id="item-title" required maxlength="100">
+                    <span class="helper-text">Be specific and descriptive (max 100 characters)</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="item-category">Category*</label>
+                    <select id="item-category" required>
+                        <option value="">Select a category</option>
+                        <option value="art">Art</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="collectibles">Collectibles</option>
+                        <option value="jewelry">Jewelry</option>
+                        <option value="furniture">Furniture</option>
+                        <option value="fashion">Fashion</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="item-condition">Item Condition*</label>
+                    <select id="item-condition" required>
+                        <option value="">Select condition</option>
+                        <option value="new">Brand New</option>
+                        <option value="like-new">Like New</option>
+                        <option value="excellent">Excellent</option>
+                        <option value="good">Good</option>
+                        <option value="fair">Fair</option>
+                        <option value="poor">Poor</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="item-description">Item Description*</label>
+                    <textarea id="item-description" rows="8" required></textarea>
+                    <span class="helper-text">Include details about features, history, and any defects</span>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>Photos</h2>
+
+                <div class="photo-upload-area">
+                    <div class="upload-instructions">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 16.5V6.5M12 6.5L8 10.5M12 6.5L16 10.5" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="#4F46E5" stroke-width="2"/>
+                        </svg>
+                        <p>Drag photos here or click to upload</p>
+                        <p class="small">Upload up to 10 photos. First photo will be the main image.</p>
+                    </div>
+                    <input type="file" id="photo-upload" multiple accept="image/*">
+                </div>
+
+                <div class="photo-preview-container">
+                    <!-- Photo previews will appear here after upload -->
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>Auction Settings</h2>
+
+                <div class="form-group">
+                    <label for="starting-price">Starting Price*</label>
+                    <div class="price-input">
+                        <span class="currency-symbol">$</span>
+                        <input type="number" id="starting-price" min="1" step="0.01" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="reserve-price">Reserve Price (Optional)</label>
+                    <div class="price-input">
+                        <span class="currency-symbol">€</span>
+                        <input type="number" id="reserve-price" min="1" step="0.01">
+                    </div>
+                    <span class="helper-text">Minimum price you're willing to sell for</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="auction-duration">Auction Duration*</label>
+                    <select id="auction-duration" required>
+                        <option value="1">1 day</option>
+                        <option value="3">3 days</option>
+                        <option value="5">5 days</option>
+                        <option value="7" selected>7 days</option>
+                        <option value="10">10 days</option>
+                        <option value="14">14 days</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label >Shipping Options*</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="shipping" value="domestic"> Domestic Shipping</label>
+                        <label><input type="checkbox" name="shipping" value="international"> International
+                            Shipping</label>
+                        <label><input type="checkbox" name="shipping" value="pickup"> Local Pickup</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="verification-notice">
+                <p><strong>Note:</strong> All new listings must be approved by our admin team before becoming active on the site. 
+                This process usually takes less than 24 hours.</p>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">Create Auction</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About BidMaster</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Help & Contact</h3>
+                <ul>
+                    <li><a href="#">Customer Support</a></li>
+                    <li><a href="#">Seller Information</a></li>
+                    <li><a href="#">Dispute Resolution</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Stay Connected</h3>
+                <div class="social-links">
+                    <a href="#" class="social-icon">Facebook</a>
+                    <a href="#" class="social-icon">Twitter</a>
+                    <a href="#" class="social-icon">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 BidMaster. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/auth-check.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/create-listing.js"></script>
+</body>
+
+</html>

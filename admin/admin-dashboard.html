@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BidMaster Admin - Dashboard</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+    <header class="admin-header">
+        <div class="admin-logo">
+            <h1>BidMaster Admin</h1>
+        </div>
+        <div class="admin-user">
+            <span class="admin-username">Admin User</span>
+            <a href="../index.html" class="btn-text" target="_blank">View Main Site</a>
+            <button id="admin-logout" class="btn-text">Logout</button>
+        </div>
+    </header>
+
+    <div class="admin-container">
+        <nav class="admin-sidebar">
+            <ul>
+                <li><a href="admin-dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="admin-verification.html">Auction Verification</a></li>
+            </ul>
+        </nav>
+
+        <main class="admin-content">
+            <h1>Dashboard</h1>
+            
+            <!-- Replace the static stats with empty placeholders -->
+            <div class="admin-stats-grid">
+                <div class="admin-stat-card">
+                    <h3>Pending Verification</h3>
+                    <p class="stat-value">-</p>
+                    <p class="stat-change">Loading...</p>
+                </div>
+                
+                <div class="admin-stat-card">
+                    <h3>Active Auctions</h3>
+                    <p class="stat-value">-</p>
+                    <p class="stat-change">Loading...</p>
+                </div>
+            </div>
+
+            <div class="admin-panels">
+                <!-- Replace the existing activity list with this -->
+                <div class="admin-panel">
+                    <h2>Recent Activity</h2>
+                    <ul class="activity-list">
+                        <li class="loading-message">Loading recent activity...</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/admin-auth-check.js"></script>
+    <script src="js/admin.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

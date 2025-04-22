@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Details | BidMaster</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/item-details.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>BidMaster</h1>
+            </div>
+            
+            <div class="user-menu">
+                <span class="username">Welcome, User</span>
+                <div class="dropdown">
+                    <button class="dropdown-button">My Account</button>
+                    <div class="dropdown-content">
+                        <a href="profile.html">Profile</a>
+                        <a href="my-bids.html">My Bids</a>
+                        <a href="my-listings.html">My Listings</a>
+                        <a href="login.html" id="logout">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="listings.html" class="active">All Listings</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="create-listing.html">Sell Item</a></li>
+                <li><a href="about.html">How It Works</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="item-details-container">
+        <!-- Breadcrumb will be populated dynamically -->
+        <div class="item-breadcrumb"></div>
+
+        <!-- Item header -->
+        <div class="item-details-header">
+            <h1>Loading item details...</h1>
+            <div class="item-actions">
+                <button class="btn-text">Share</button>
+            </div>
+        </div>
+
+        <div class="item-content">
+            <!-- Left Column: Gallery -->
+            <div class="item-gallery">
+                <!-- Initially empty or with placeholder content -->
+            </div>
+
+            <!-- Right Column: Bidding Info -->
+            <div class="item-bidding">
+                <!-- Initially empty or with placeholder content -->
+            </div>
+        </div>
+
+        <!-- Description tab -->
+        <div class="item-details-tabs">
+            <button class="item-tab-button active" data-tab="description">Description</button>
+            <button class="item-tab-button" data-tab="bids">Bids</button>
+        </div>
+
+        <div class="item-tab-content active" id="description">
+            <!-- Will be populated dynamically -->
+            <div class="loading">Loading description...</div>
+        </div>
+
+        <div class="item-tab-content" id="bids">
+            <div class="bid-history-container">
+                <div class="loading">Loading bid history...</div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About BidMaster</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Help & Contact</h3>
+                <ul>
+                    <li><a href="#">Customer Support</a></li>
+                    <li><a href="#">Seller Information</a></li>
+                    <li><a href="#">Dispute Resolution</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 BidMaster. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/auth-check.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/item-details.js"></script>
+</body>
+
+</html>

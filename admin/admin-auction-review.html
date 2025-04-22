@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BidMaster Admin - Auction Review</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+    <header class="admin-header">
+        <div class="admin-logo">
+            <h1>BidMaster Admin</h1>
+        </div>
+        <div class="admin-user">
+            <span class="admin-username">Admin User</span>
+            <a href="../index.html" class="btn-text" target="_blank">View Main Site</a>
+            <button id="admin-logout" class="btn-text">Logout</button>
+        </div>
+    </header>
+
+    <div class="admin-container">
+        <nav class="admin-sidebar">
+            <ul>
+                <li><a href="admin-dashboard.html">Dashboard</a></li>
+                <li><a href="admin-verification.html" class="active">Auction Verification</a></li>
+            </ul>
+        </nav>
+
+        <main class="admin-content">
+            <div class="review-header">
+                <a href="admin-verification.html" class="back-link">← Back to Verification Queue</a>
+                <h1>Review Auction #12345</h1>
+            </div>
+
+            <div class="review-grid">
+                <div class="review-images">
+                    <div class="main-image">
+                        <img src="https://via.placeholder.com/800x600?text=No+Image+Available" alt="Main Product Image">
+                    </div>
+                    <div class="thumbnail-gallery">
+                        <!-- Thumbnails will be dynamically inserted here -->
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="auction-details">
+                    <!-- Auction details will be dynamically inserted here -->
+                    <div class="loading-indicator">Loading auction details...</div>
+                </div>
+                
+                <div class="item-description">
+                    <!-- Description will be dynamically inserted here -->
+                </div>
+                
+                <div class="seller-information">
+                    <!-- Seller info will be dynamically inserted here -->
+                </div>
+                
+                <div class="verification-decision">
+                    <h3>Review Decision</h3>
+                    
+                    <div class="decision-form">
+                        <div class="form-group">
+                            <label for="verification-status">Status</label>
+                            <select id="verification-status">
+                                <option value="approve">Approve</option>
+                                <option value="reject">Reject</option>
+                                <option value="pending">Request More Information</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="admin-notes">Admin Notes</label>
+                            <textarea id="admin-notes" rows="4" placeholder="Add notes about this review (internal only)"></textarea>
+                        </div>
+                        
+                        <div class="form-group rejection-reason" style="display:none;">
+                            <label for="rejection-reason">Rejection Reason</label>
+                            <select id="rejection-reason">
+                                <option value="">Select a reason</option>
+                                <option value="images">Poor quality images</option>
+                                <option value="description">Insufficient description</option>
+                                <option value="pricing">Unreasonable pricing</option>
+                                <option value="prohibited">Prohibited item</option>
+                                <option value="duplicate">Duplicate listing</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group rejection-message" style="display:none;">
+                            <label for="seller-message">Message to Seller</label>
+                            <textarea id="seller-message" rows="4" placeholder="Explain to the seller why their auction was rejected and what they can do to correct it"></textarea>
+                        </div>
+                        
+                        <div class="decision-actions">
+                            <a href="admin-verification.html" class="btn-secondary">Cancel</a>
+                            <button type="button" class="btn-primary">Submit Decision</button>
+                        </div>
+                    </div>
+                    
+                    <div class="decision-notification" id="decision-notification" style="display: none;">
+                        <div class="notification-content">
+                            <span class="notification-message"></span>
+                            <div class="notification-actions">
+                                <button class="btn-secondary return-to-queue">Return to Queue</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/admin-auth-check.js"></script>
+    <script src="js/admin.js"></script>
+    <script src="js/auction-review.js"></script>
+</body>
+</html>

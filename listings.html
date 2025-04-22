@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BidMaster - Browse Listings</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/listings.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>BidMaster</h1>
+            </div>
+            
+            <div class="user-menu">
+                <span class="username">Welcome, User</span>
+                <div class="dropdown">
+                    <button class="dropdown-button">My Account</button>
+                    <div class="dropdown-content">
+                        <a href="profile.html">Profile</a>
+                        <a href="my-bids.html">My Bids</a>
+                        <a href="my-listings.html">My Listings</a>
+                        <a href="login.html" id="logout">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="listings.html" class="active">All Listings</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="create-listing.html">Sell Item</a></li>
+                <li><a href="about.html">How It Works</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="listings-container">
+        <aside class="filters">
+            <div class="filter-section">
+                <h3>Categories</h3>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="category" value="art"> Art</label>
+                    <label><input type="checkbox" name="category" value="electronics"> Electronics</label>
+                    <label><input type="checkbox" name="category" value="collectibles"> Collectibles</label>
+                    <label><input type="checkbox" name="category" value="jewelry"> Jewelry</label>
+                    <label><input type="checkbox" name="category" value="furniture"> Furniture</label>
+                    <label><input type="checkbox" name="category" value="fashion"> Fashion</label>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3>Price Range</h3>
+                <div class="range-inputs">
+                    <div>
+                        <span class="range-label">Minimum (€)</span>
+                        <input type="number" id="min-price" placeholder="Min" min="0">
+                    </div>
+                    <div>
+                        <span class="range-label">Maximum (€)</span>
+                        <input type="number" id="max-price" placeholder="Max" min="0">
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3>Auction Status</h3>
+                <div class="radio-group">
+                    <label><input type="radio" name="status" value="all" checked> All</label>
+                    <label><input type="radio" name="status" value="ending-soon"> Ending Soon</label>
+                    <label><input type="radio" name="status" value="newly-listed"> Newly Listed</label>
+                </div>
+            </div>
+
+            <button class="btn-primary">Apply Filters</button>
+            <button class="btn-text">Reset All</button>
+        </aside>
+
+        <main class="listings">
+            <div class="listings-header">
+                <h2>All Listings</h2>
+                <div class="listings-controls">
+                    <div class="search-container">
+                        <input type="text" placeholder="Search within results...">
+                        <button class="search-button">Search</button>
+                    </div>
+                    <div class="sort-dropdown">
+                        <label for="sort">Sort by:</label>
+                        <select id="sort">
+                            <option value="ending-soon">Ending Soon</option>
+                            <option value="newest">Newest</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="bids">Most Bids</option>
+                        </select>
+                    </div>
+                    <div class="view-toggle">
+                        <button class="view-btn active" data-view="grid">Grid</button>
+                        <button class="view-btn" data-view="list">List</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="search-results-indicator" style="display: none;">
+                <p>Searched for: "<span class="search-term"></span>"</p>
+                <button class="clear-search btn-text">Clear Search</button>
+            </div>
+
+            <div class="active-filters" id="active-filters">
+                <!-- Active filters will be inserted here dynamically -->
+            </div>
+
+            <div class="auction-grid">
+                <!-- Auction items will be loaded dynamically -->
+            </div>
+
+            <div class="pagination">
+                <button class="page-btn disabled">Previous</button>
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <span>...</span>
+                <button class="page-btn">10</button>
+                <button class="page-btn">Next</button>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About BidMaster</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Help & Contact</h3>
+                <ul>
+                    <li><a href="#">Customer Support</a></li>
+                    <li><a href="#">Seller Information</a></li>
+                    <li><a href="#">Dispute Resolution</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Stay Connected</h3>
+                <div class="social-links">
+                    <a href="#" class="social-icon">Facebook</a>
+                    <a href="#" class="social-icon">Twitter</a>
+                    <a href="#" class="social-icon">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 BidMaster. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/auth-check.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/listings.js"></script>
+</body>
+</html>

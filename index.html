@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BidMaster - Online Auction House</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>BidMaster</h1>
+            </div>
+            <div class="user-menu">
+                <span class="username">Welcome, User</span>
+                <div class="dropdown">
+                    <button class="dropdown-button">My Account</button>
+                    <div class="dropdown-content">
+                        <a href="profile.html">Profile</a>
+                        <a href="my-bids.html">My Bids</a>
+                        <a href="my-listings.html">My Listings</a>
+                        <a href="admin/admin-dashboard.html" id="admin-link" style="display:none;">Admin Dashboard</a>
+                        <a href="login.html" id="logout">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="listings.html">All Listings</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="create-listing.html">Sell Item</a></li>
+                <li><a href="about.html">How It Works</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Find Unique Items at Great Prices</h2>
+            <p>Join thousands of users in the most trusted online auction community</p>
+            <a href="listings.html" class="btn-primary">Browse Auctions</a>
+        </div>
+    </section>
+
+    <section class="featured-auctions">
+        <h2>Featured Auctions</h2>
+        <div class="auction-grid">
+            <!-- Dynamic auctions will be loaded here -->
+        </div>
+        <div class="view-more">
+            <a href="listings.html" class="btn-text">View all auctions →</a>
+        </div>
+    </section>
+
+    <section class="categories">
+        <h2>Popular Categories</h2>
+        <div class="category-grid">
+            <a href="listings.html?category=art" class="category-item">
+                <div class="category-icon">🖼️</div>
+                <h3>Art</h3>
+            </a>
+            <a href="listings.html?category=electronics" class="category-item">
+                <div class="category-icon">📱</div>
+                <h3>Electronics</h3>
+            </a>
+            <a href="listings.html?category=collectibles" class="category-item">
+                <div class="category-icon">🏆</div>
+                <h3>Collectibles</h3>
+            </a>
+            <a href="listings.html?category=jewelry" class="category-item">
+                <div class="category-icon">💍</div>
+                <h3>Jewelry</h3>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About BidMaster</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Help & Contact</h3>
+                <ul>
+                    <li><a href="#">Customer Support</a></li>
+                    <li><a href="#">Seller Information</a></li>
+                    <li><a href="#">Dispute Resolution</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Stay Connected</h3>
+                <div class="social-links">
+                    <a href="#" class="social-icon">Facebook</a>
+                    <a href="#" class="social-icon">Twitter</a>
+                    <a href="#" class="social-icon">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 BidMaster. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/auth-check.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/home.js"></script>
+</body>
+
+</html>

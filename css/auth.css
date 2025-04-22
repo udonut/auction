@@ -1,0 +1,78 @@
+.auth-container {
+    max-width: 600px; /* Increased from 500px */
+    width: 90%; /* Add this to ensure proper scaling on mobile */
+    margin: 4rem auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px var(--shadow);
+    padding: 2.5rem; /* Increased from 2rem */
+    position: relative; /* Add this for proper positioning */
+    z-index: 1; /* Ensure it appears above other elements */
+}
+
+.auth-tabs {
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+
+.auth-form h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.forgot-password {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Add this at the bottom of the auth.css file */
+#register-form .form-actions {
+    justify-content: flex-end;  /* Aligns button to the right */
+}
+
+#register-form .btn-primary {
+    margin-left: auto;  /* Additional support for right alignment */
+}
+
+/* Add this to your auth.css file */
+.error-message {
+    color: #d90429;
+    background-color: rgba(217, 4, 41, 0.1);
+    border-left: 3px solid #d90429;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    display: none;
+}
+
+.error-message.visible {
+    display: block;
+}
+
+/* Add responsive adjustments */
+@media (max-width: 768px) {
+    .auth-container {
+        width: 95%;
+        padding: 2rem;
+        margin: 2rem auto;
+    }
+}
+
+/* Ensure the forms inside have proper spacing */
+.auth-form {
+    width: 100%;
+}
+
+.auth-form .form-group {
+    margin-bottom: 1.75rem; /* Slightly increase spacing between fields */
+}
+

@@ -1,0 +1,701 @@
+/* My Bids Page Styles */
+.my-bids-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.my-bids-container h1 {
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.bids-tabs {
+    display: flex;
+    overflow-x: auto;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.bids-filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.bids-content {
+    display: none;
+}
+
+.bids-content.active {
+    display: block;
+}
+
+.bid-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.bid-item {
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px var(--shadow);
+}
+
+.bid-image {
+    width: 200px;
+    position: relative;
+}
+
+.bid-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bid-details {
+    flex-grow: 1;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.bid-status {
+    margin: 0.5rem 0;
+    padding: 0.5rem 0;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.highest-bidder .status-badge {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.outbid .status-badge {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.reserve-not-met .status-badge {
+    background-color: #f0ad4e;
+    color: white;
+}
+
+.won .status-badge {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.lost .status-badge {
+    background-color: var(--text-light);
+    color: white;
+}
+
+.bid-actions {
+    display: flex;
+    margin-top: auto;
+    gap: 0.5rem;
+}
+
+.time-left.urgent {
+    background-color: var(--danger-color);
+}
+
+/* My Listings Page Styles */
+.my-listings-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.listings-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.listings-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.summary-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 6px var(--shadow);
+}
+
+.summary-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.summary-value {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+    color: var(--primary-color);
+}
+
+.summary-label {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.listings-tabs {
+    display: flex;
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.listings-filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.listings-content {
+    display: none;
+}
+
+.listings-content.active {
+    display: block;
+}
+
+.listings-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px var(--shadow);
+}
+
+.listings-table thead {
+    background-color: var(--background-light);
+}
+
+.listings-table th,
+.listings-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.item-cell {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.item-thumbnail {
+    width: 80px;
+    height: 80px;
+}
+
+.item-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.item-info h4 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.item-id {
+    color: var(--text-light);
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+}
+
+.reserve-status {
+    font-size: 0.85rem;
+    margin-top: 0.3rem;
+}
+
+.reserve-status.met {
+    color: var(--success-color);
+}
+
+.reserve-status.not-met {
+    color: var(--danger-color);
+}
+
+.listing-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Profile Page Styles */
+.profile-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.profile-sidebar {
+    width: 280px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px var(--shadow);
+    align-self: flex-start;
+    text-align: center;
+}
+
+.profile-image-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid var(--primary-color);
+    background-color: #e3e8f0;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    overflow: hidden;
+    position: relative;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+.profile-image-edit {
+    width: 100%;
+}
+
+.profile-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.search-container {
+    display: flex;
+}
+
+.member-since {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.profile-content {
+    flex-grow: 1;
+}
+
+.profile-content h1 {
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.profile-tabs {
+    display: flex;
+    overflow-x: auto;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.tab-content {
+    display: none;
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px var(--shadow);
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-content h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+/* Success message styles */
+.success-message {
+    color: #28a745;
+    background-color: rgba(40, 167, 69, 0.1);
+    border-left: 3px solid #28a745;
+    padding: 0.75rem 1rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: none;
+}
+
+.success-message.show {
+    display: block;
+    opacity: 1;
+}
+
+.success-message.fade-out {
+    opacity: 0;
+}
+
+/* Error message styles (Add if not already present) */
+.error-message {
+    color: #d90429;
+    background-color: rgba(217, 4, 41, 0.1);
+    border-left: 3px solid #d90429;
+    padding: 0.75rem 1rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: none;
+}
+
+.error-message.show {
+    display: block;
+    opacity: 1;
+}
+
+.error-message.fade-out {
+    opacity: 0;
+}
+
+/* Add these new profile image upload styles at the end of the file */
+.profile-image-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid var(--primary-color);
+    background-color: #e3e8f0;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    overflow: hidden;
+    position: relative;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+.profile-image-edit {
+    width: 80%;
+}
+
+.upload-progress {
+    width: 80%;
+    height: 6px;
+    background-color: var(--border-color);
+    border-radius: 3px;
+    margin-top: 0.5rem;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+/* Add these styles at the end of your file */
+
+/* Search highlighting */
+.highlight {
+    background-color: rgba(58, 134, 255, 0.2);
+    padding: 0 2px;
+    border-radius: 2px;
+}
+
+/* Empty search message */
+.empty-search-message {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: var(--text-light);
+}
+
+.empty-search-message h3 {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.empty-search-message p {
+    margin-bottom: 1rem;
+}
+
+.empty-search-message .btn-secondary {
+    min-width: 120px;
+}
+
+/* Search results indicator */
+.search-results-indicator {
+    background-color: #f0f7ff;
+    border-left: 4px solid var(--primary-color);
+    padding: 0.8rem 1rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-results-indicator p {
+    margin: 0;
+    font-weight: 500;
+}
+
+.search-results-indicator .search-term {
+    font-style: italic;
+}
+
+.clear-search {
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+/* Style for the Remove Photo button */
+.profile-image-remove {
+    width: 70%;
+    border: 2px solid#d90429;
+    color: #d90429;
+    margin-top: 0.7rem;
+    border-radius: 4px;
+    padding: 0.8rem 0;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    display: block;
+}
+
+/* Edit button: green border and text */
+.btn-edit-scheduled {
+    border: 2px solid #38b000;
+    color: #38b000;
+    background: #fff;
+    border-radius: 4px;
+    padding: 0.5rem 1.2rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.btn-edit-scheduled:hover,
+.btn-edit-scheduled:focus {
+    transform: translateY(-2px);
+}
+
+/* Remove button: red border and text */
+.btn-remove-scheduled {
+    border: 2px solid #d90429;
+    color: #d90429;
+    background: #fff;
+    border-radius: 4px;
+    padding: 0.5rem 1.2rem;
+    margin-left: 0.5rem;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.btn-remove-scheduled:hover,
+.btn-remove-scheduled:focus {
+    transform: translateY(-2px);
+}
+
+
+.sort-dropdown select {
+    padding: 0.5rem 1.2rem;
+    border: 1.5px solid var(--border-color);
+    border-radius: 4px;
+    background-color: #fff;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 6px rgba(58, 134, 255, 0.07);
+    cursor: pointer;
+    min-width: 160px;
+}
+
+.sort-dropdown {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Status badges for unsold tab */
+.status-no-bids {
+    background-color: #f8f9fa;
+    color: #6c757d;
+}
+
+.status-rejected {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.status-expired {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status-more-info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+
+.status-unsold {
+    background-color: #e2e3e5;
+    color: #383d41;
+}
+
+/* Modal styles for relist functionality */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 8px;
+    max-width: 450px;
+    width: 90%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    animation: modalFadeIn 0.3s ease-out;
+}
+
+.modal-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-header h2 {
+    margin: 0;
+    color: var(--text-color);
+    font-size: 1.5rem;
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.success-message {
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: #d4edda;
+    color: #155724;
+    border-left: 4px solid #28a745;
+    border-radius: 4px;
+}
+
+/* Status for Not Sold items */
+.status-not-sold {
+    background-color: #ffebee;
+    color: #b71c1c;
+}
+
+/* Pending seller confirmation status */
+.pending-seller .status-badge {
+    background-color: #ff9800;
+    color: white;
+}
+
+.info-btn {
+    color: #ff9800;
+    padding: 0.5rem;
+    font-size: 0.85rem;
+    font-style: italic;
+    cursor: default;
+}
+
+
