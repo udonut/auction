@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+package auction;
+
+// Empty request for ListAuctions
+message Empty {}
+
+// The Auction model we return
+message Auction {
+  int32           id      = 1;
+  string          title   = 2;
+  string          category= 3;
+  double          price   = 4;
+  repeated string images  = 5;
+  string          endsAt  = 6;  // ISO-8601 timestamp
+}
+
+// ListAuctions response
+message AuctionList {
+  repeated Auction auctions = 1;
+}
+
+// GetAuction request
+message AuctionId {
+  int32 id = 1;
+}
+
+// Bid request
+message BidRequest {
+  int32   auctionId = 1;
+  int32   userId    = 2;
+  double  amount    = 3;
+}
+
+// Bid response
+message BidResponse {
+  int32   id        = 1;
+  int32   auctionId = 2;
+  int32   userId    = 3;
+  double  amount    = 4;
+  string  status    = 5;
+  string  createdAt = 6;
+}
+
+// Our gRPC service definition
+service AuctionService {
+  rpc ListAuctions (Empty)      returns (AuctionList);
+  rpc GetAuction   (AuctionId)  returns (Auction);
+  rpc PlaceBid     (BidRequest) returns (BidResponse);
+}
