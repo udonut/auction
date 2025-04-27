@@ -7,7 +7,7 @@ const pool = new Pool({
   database: 'bidmaster',
   port: 5432,
   // password: 'postgres' // Using the default postgres password
-  password: 'your_pgadmin_password' // Replace with your actual password
+  password: '1985' // Replace with your actual password
 });
 
 // Test the connection
